@@ -1,3 +1,11 @@
-#!/usr/bin/env bash
-# Connects to server 100.25.203.42 with key in ~/.ssh/school
-ssh ~/.ssh/school ubuntu@100.25.203.42
+#!/bin/bash
+
+# Set the path to your private key file
+PRIVATE_KEY="~/.ssh/school"
+
+# Set the username and hostname of your server
+USERNAME="ubuntu"
+HOSTNAME="your_server_ip_or_hostname"
+
+# SSH command to connect to the server
+ssh -i "school" "ubuntu@100.25.203.42"

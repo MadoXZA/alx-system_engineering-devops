@@ -11,11 +11,11 @@ apt-get -y install haproxy
 # edit config file
 server_config=\
 "
-frontend  madox_frontend
+frontend  madox.tech
         bind *:80
         mode http
-        default_backend madox_backend
-backend madox_backend
+        default_backend webservers
+backend webservers
         balance roundrobin
         server 176572-web-01 54.144.154.180:80 check
         server 176572-web-02 100.25.147.234:80 check
